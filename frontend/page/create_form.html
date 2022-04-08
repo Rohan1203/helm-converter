@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/app.js"></script>
+    <title>Create Helm</title>
+</head>
+<body>  
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Helm-Chart</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Create</li>
+        </ol>
+    </nav>
+
+    <div class="alert" id="alert">
+        <span class="closebtn">&times;</span>  
+        <strong id="alertHead"></strong> <span id="alertDesc"></span>
+        <!-- <strong id="alertHead">Error!</strong> <span id="alertDesc">Server is not responding to the request.</span> -->
+    </div>
+
+    <!-- <div class="alert success" id="successAlert">
+        <span class="closebtn">&times;</span>  
+        <strong>Success!</strong> Helm chart created successfully & ready for download.
+    </div> -->
+
+    <div class="container form-body" id="form-div">
+        <form class="g-3">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 custom-size">
+                    <label for="Helm-ChartName">Helm-Chart</label>
+                    <input type="text" class="form-control" id="Helm-ChartName" aria-describedby="Helm-ChartName" placeholder="Helm-Chart Name" required>
+                </div>
+                <div class="col-md-6 col-sm-6 custom-size">
+                    <label for="ImageName">Image</label>
+                    <input type="text" class="form-control" id="ImageName" aria-describedby="ImageName" placeholder="Image Name" required>
+                </div>
+                <div class="col-md-6 col-sm-6 custom-size">
+                    <label for="Port">Port</label>
+                    <input type="number" min="0" required minlength="2" max="80000" class="form-control" id="Port" aria-describedby="Port" placeholder="Port" required>
+                </div>
+            </div>
+            <hr style="border: .3px solid #CCCCCC;" class="custom-size">
+            <button type="button" class="btn btn-success custom-btn-create" id="Create" name="Create" onclick="return createHelmChart()">Create</button>
+            <!-- <button type="reset" class="btn btn-warning custom-btn-reset" id="Create" name="Create">Reset</button> -->
+        </form>
+    </div>
+
+    <!-- 
+        one option to add download is 
+            after clicking on create button the download button will display for the download and at the same
+            time will disable the for and will be putting one link saying {want to create another helm-chart}
+            near the download here button.
+
+            then when user will click {want to create another helm-chart} link, the form should get activate
+            again for taking input.
+     -->
+
+    <a id="a_d" class="hide-show">Download Here</a>
+</body>
+</html>

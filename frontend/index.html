@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js"></script>
+  <title>Rakuten - Helm Converter</title>
+</head>
+
+<body>
+
+  <div class="sidebar">
+    <div class="logo-details">
+      <img src="image/r-logo.png" style="width: 90px;" alt="">
+        <div class="logo_name">Rakuten</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <!-- <li>
+          <i class='bx bx-search' ></i>
+         <input type="text" placeholder="Search...">
+         <span class="tooltip">Search</span>
+      </li> -->
+
+      <li>
+        <!-- <a href="#" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-keyboard="false"> -->
+        <a href="page/create_form.html" target="body">
+          <i class='bx bx-folder-plus'></i>
+          <span class="links_name">Create Helm Chart</span>
+        </a>
+         <span class="tooltip">Create Helm Chart</span>
+      </li>
+
+      <li>
+        <!-- <a href="#" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-keyboard="false"> -->
+        <a href="page/deploy_helm.html" target="body">
+          <i class='bx bx-server'></i>
+          <span class="links_name">Deploy Helm [Install]</span>
+        </a>
+         <span class="tooltip">Deploy Helm [Install]</span>
+      </li>
+      
+     <!-- <li>
+       <a href="page/create_form.html" target="body">
+         <i class='bx bx-chat' ></i>
+         <span class="links_name">Messages</span>
+       </a>
+       <span class="tooltip">Messages</span>
+     </li> -->
+
+     <!-- <li>
+       <a href="#">
+         <i class='bx bx-pie-chart-alt-2' ></i>
+         <span class="links_name">Analytics</span>
+       </a>
+       <span class="tooltip">Analytics</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-folder' ></i>
+         <span class="links_name">File Manager</span>
+       </a>
+       <span class="tooltip">Files</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-cart-alt' ></i>
+         <span class="links_name">Order</span>
+       </a>
+       <span class="tooltip">Order</span>
+     </li> -->
+
+     <!-- <li>
+       <a href="#">
+         <i class='bx bx-heart' ></i>
+         <span class="links_name">Saved</span>
+       </a>
+       <span class="tooltip">Saved</span>
+     </li> -->
+     <!-- <li>
+       <a href="#">
+         <i class='bx bx-cog' ></i>
+         <span class="links_name">Setting</span>
+       </a>
+       <span class="tooltip">Setting</span>
+     </li> -->
+     <li class="profile">
+         <div class="profile-details">
+           <img src="image/r-logo.png" alt="profileImg">
+           <div class="name_job">
+             <div class="name">Rohan Das</div>
+             <div class="job">Technical Intern</div>
+           </div>
+         </div>
+         <i class='bx bx-log-out' id="log_out" ></i>
+     </li>
+    </ul>
+  </div>
+
+  <section class="home-section">
+    <div class="container-fluid cf">
+      <h2 class="text">Helm Converter</h2>
+    </div>
+    
+    <iframe class="body-iframe" name="body" src="" frameborder="1" scroll="no"></iframe>
+    
+  </section>
+
+    <!-- Modal -->
+    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Create Your Helm-Chart</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <form class="g-3">
+                <div class="row">
+                  <div class="col-md-6 col-sm-6 custom-size">
+                    <label for="Helm-ChartName">Helm-Chart</label>
+                    <input type="text" class="form-control" id="Helm-ChartName" aria-describedby="Helm-ChartName" placeholder="Helm-Chart Name" required>
+                  </div>
+                  <div class="col-md-6 col-sm-6 custom-size">
+                    <label for="ImageName">Image</label>
+                    <input type="text" class="form-control" id="ImageName" aria-describedby="ImageName" placeholder="Image Name" required>
+                  </div>
+                  <div class="col-md-6 col-sm-6 custom-size">
+                    <label for="Port">Port</label>
+                    <input type="number" min="0" required minlength="2" max="80000" class="form-control" id="Port" aria-describedby="Port" placeholder="Port" required>
+                  </div>
+                </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button class="btn btn-primary" id="Create" name="Create" onclick="createHelmChart()">Create</button>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  
+
+
+
+<script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+  // searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+  //   sidebar.classList.toggle("open");
+  //   menuBtnChange(); //calling the function(optional)
+  // });
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+    if(sidebar.classList.contains("open")){
+      closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+    }else {
+      closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+    }
+  }
+</script>
+</body>
+</html>
