@@ -2,11 +2,16 @@ from flask import Flask
 from .api.routes import api
 from flask_cors import CORS
 import pyfiglet
+from flask import jsonify
 import os
 
 app = Flask(__name__)
 CORS(app)
 app.register_blueprint(api)
+
+@app.route('/health')
+def healthCheck():
+    return jsonify({"health":"up"})
 
 # result = pyfiglet.figlet_format("Helm Chart Converter")
 # print(result)
