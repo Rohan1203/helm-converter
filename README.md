@@ -4,6 +4,7 @@
 - Create a folder to create your virtualenv within it
 - Create a virtual environment: python3 -m virtualenv [virtual env-name]
 - Activate virtual-environment: source [virtualenv name]/bin/activate
+- Go to the backend directory
 - Run the script to export the module and run: ./setup.sh
 
 <!-- - export app module -> export FLASK_APP="app" -->
@@ -14,6 +15,7 @@
 
 ## RUN the UI (Using local server)
 - Install browser-sync: npm install -g browser-sync
+- Go to the fronend directory
 - Start the browser-sync: browser-sync start --server --files "**/*"
   
 
