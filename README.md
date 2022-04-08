@@ -17,4 +17,4 @@
 - Start the browser-sync: browser-sync start --server --files "**/*"
   
 
- ### The Flask server is not a production WSGI server. So, GUNICORN is taking the responsibility of server management. You can have look into the setup.sh file; If want to run with flask just uncomment the flask line and commen out the gunicorn one.
+ ### Note: The Flask server is not a production WSGI server. So, GUNICORN is taking the responsibility of server management. You can have look into the setup.sh file; If want to run with flask just uncomment the flask line and commen out the gunicorn one.
