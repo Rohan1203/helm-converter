@@ -1,7 +1,6 @@
 #!/usr/bin/env sh
 
 export FLASK_APP=app
-# flask run
 
 if [ -z ${GUNICORN_DEBUG+x} ]
 then
@@ -9,3 +8,5 @@ then
 else
 	GUNICORN_WORKERS=4 gunicorn -c gunicorn_conf.py "app:app" --reload
 fi
+
+# flask run
